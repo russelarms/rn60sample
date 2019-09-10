@@ -10,6 +10,7 @@ import com.facebook.react.ReactApplication;
 import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.soloader.SoLoader;
+import com.microsoft.appcenter.AppCenter;
 
 import java.util.List;
 
@@ -44,6 +45,7 @@ public class MainApplication extends Application implements ReactApplication {
   @Override
   public void onCreate() {
     super.onCreate();
+    AppCenter.setLogLevel(android.util.Log.VERBOSE);
     SoLoader.init(this, /* native exopackage */ false);
   }
 }
